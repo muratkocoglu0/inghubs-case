@@ -1,0 +1,32 @@
+spring:
+ application:
+  name: inghubs-case
+ datasource:
+  url: jdbc:h2:mem:inghubs-test-db;LOCK_TIMEOUT=5000
+  driverClassName: org.h2.Driver
+  username: sa
+  password:
+  
+ jpa:
+  defer-datasource-initialization: true
+  database-platform: org.hibernate.dialect.H2Dialect
+  show-sql: true
+  hibernate:
+   ddl-auto: create-drop
+
+ sql:
+  init:
+   mode: always
+  
+ h2:
+  console:
+   enabled: true
+  
+ messages:
+  basename: i18n
+  encoding: UTF-8
+ 
+jwt:
+  secret: "2bNokLO7U3XYOKC3FjQh3o4hH5l7kY2l1KxYx3sXq4w="
+  expiration: 3600000
+
